@@ -1,19 +1,26 @@
 package org.example;
 
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPageTree;
-import org.apache.pdfbox.rendering.ImageType;
-import org.apache.pdfbox.rendering.PDFRenderer;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{
 
+		System.out.println("150 - normal quality");
+		System.out.println("300 - cool quality");
+		System.out.println("600 - premium quality");
+		System.out.println();
+		System.out.print("Enter DPI: ");
+
+		Scanner scanner = new Scanner(System.in);
+		int dpi = scanner.nextInt();
+		System.out.println();
+
+		List<Thread> savers = new ArrayList<>();
 		long currentTimeMillis = System.currentTimeMillis();
 
 		File dir = new File(".");
@@ -24,15 +31,35 @@ public class Main
 			{
 				if(file.isFile() && getFileExtension(file.getName()).equalsIgnoreCase("pdf"))
 				{
-					convert(file);
+					Saver saver = new Saver(file, dpi);
+					Thread thread = new Thread(saver);
+					thread.start();
+
+					savers.add(thread);
 				}
 			}
 		}
 
+		while(true)
+		{
+			boolean allDead = true;
+
+			for(Thread thread : savers)
+			{
+				if(thread.isAlive()) allDead = false;
+			}
+
+			//Thread.sleep(1000);
+			if(allDead) break;
+		}
+
+
 		long diff = System.currentTimeMillis() - currentTimeMillis;
 
-		System.out.print(diff);
-
+		System.out.println();
+		System.out.print("Time spent: " + diff / 1000f + " seconds");
+		scanner.nextLine();
+		scanner.nextLine();
 	}
 
 	private static String getFileExtension(String fileName)
@@ -40,52 +67,5 @@ public class Main
 		if(fileName == null || fileName.equals("")) return "undefined";
 		int dotIndex = fileName.lastIndexOf(".");
 		return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
-	}
-
-	private static void convert(File sourceFile)
-	{
-		try
-		{
-			String destinationDir = sourceFile.getName().replace(".pdf", "") + "/"; // converted images from pdf document are saved here
-
-			File destinationFile = new File(destinationDir);
-			if(!destinationFile.exists())
-			{
-				boolean fileCreated = destinationFile.mkdir();
-				if(fileCreated) System.out.println("Folder Created -> " + destinationFile.getAbsolutePath());
-			}
-			if(sourceFile.exists())
-			{
-				System.out.println("Images copied to Folder: " + destinationFile.getName());
-
-				PDDocument document = PDDocument.load(sourceFile);
-				PDPageTree pdPageTree = document.getDocumentCatalog().getPages();
-				System.out.println("Total files to be converted -> " + pdPageTree.getCount());
-
-				PDFRenderer pdfRenderer = new PDFRenderer(document);
-
-				String fileName = sourceFile.getName().replace(".pdf", "");
-				int pageNumber = 1;
-				for(int page = 0; page < document.getNumberOfPages(); ++page)
-				{
-
-					BufferedImage image = pdfRenderer.renderImageWithDPI(page, 150, ImageType.RGB);
-					File outputFile = new File(destinationDir + fileName + "_" + pageNumber + ".jpg");
-					System.out.println("Image Created -> " + outputFile.getName());
-					ImageIO.write(image, "jpg", outputFile);
-					pageNumber++;
-				}
-				document.close();
-				System.out.println("Converted Images are saved at -> " + destinationFile.getAbsolutePath());
-			} else
-			{
-				System.err.println(sourceFile.getName() + " File not exists");
-			}
-
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
 	}
 }

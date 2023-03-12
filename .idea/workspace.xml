@@ -9,15 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="562066d0-baa1-4861-932c-fcb71b86985e" name="Changes" comment="Works with AsposePdf">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    <list default="true" id="562066d0-baa1-4861-932c-fcb71b86985e" name="Changes" comment="add MultiThreading and Resolution changes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,7 +35,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Mv283fcnALxY0Nnq0oCGYN1GXi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,10 +50,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "C:/Igor/Programming/PDF_to_PNG/libs/pdf2png-1.0.0.jar",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
   <component name="RunManager">
@@ -76,7 +83,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678642801212</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Works with PDFBox">
+      <created>1678647775417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678647775417</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Works with PDFBox 2x version">
+      <created>1678647803052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678647803052</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add MultiThreading and Resolution changes">
+      <created>1678664368606</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678664368606</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add MultiThreading and Resolution changes">
+      <created>1678664856743</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678664856743</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,7 +127,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Works with AsposePdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works with AsposePdf" />
+    <MESSAGE value="Works with PDFBox" />
+    <MESSAGE value="Works with PDFBox 2x version" />
+    <MESSAGE value="add MultiThreading and Resolution changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MultiThreading and Resolution changes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -100,5 +138,9 @@
         <watch expression="image" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

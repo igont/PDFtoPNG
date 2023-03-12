@@ -1,5 +1,4 @@
 target/
-out/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -12,6 +11,11 @@ out/
 *.iws
 *.iml
 *.ipr
+*.pdf
+*.png
+
+# Avoid ignoring jar file (.jar files are usually ignored)
+!PDF_toPNG.jar
 
 ### Eclipse ###
 .apt_generated

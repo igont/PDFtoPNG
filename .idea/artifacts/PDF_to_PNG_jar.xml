@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/PDF_to_PNG_jar</output-path>
     <root id="archive" name="PDF_to_PNG.jar">
       <element id="module-output" name="PDF_to_PNG" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/pdfbox/fontbox/2.0.27/fontbox-2.0.27.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/2.0.27/pdfbox-2.0.27.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
