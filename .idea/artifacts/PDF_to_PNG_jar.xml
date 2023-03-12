@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PDF_to_PNG:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PDF_to_PNG_jar</output-path>
+    <root id="archive" name="PDF_to_PNG.jar">
+      <element id="module-output" name="PDF_to_PNG" />
+    </root>
+  </artifact>
+</component>
