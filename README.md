@@ -2,11 +2,11 @@
 Multithreading Pdf to Png Converter with selectable DPI
 
 
-Просто положите JAR файл в директорию, где хранятся PDF.
-В этой же директории появятся папки для PDF с несколькими страницами.
-Если же в PDF одна страница - она выведется в эту же папку
+Just put the JAR file in the directory where the PDF is stored.
+Folders for PDF with multiple pages will appear in the same directory.
+If there is only one page in the PDF, it will be displayed in the same folder.
 
-При запуске JAR вам нужно ввести DPI - разрещение, с которым будет конвертирован PDF.
+When starting the JAR, you need to enter the DPI resolution with which the PDF will be converted.
 		150 - normal quality for documents
 		300 - cool quality for printing
 		600 - premium quality for typography
